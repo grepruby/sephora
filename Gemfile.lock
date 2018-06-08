@@ -1,3 +1,9 @@
+PATH
+  remote: ../loyalty
+  specs:
+    loyalty (0.1.0)
+      rails (~> 5.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -136,6 +142,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   listen (>= 3.0.5, < 3.2)
+  loyalty!
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 5.2.0)
