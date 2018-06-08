@@ -1,5 +1,6 @@
-PATH
-  remote: ../loyalty
+GIT
+  remote: https://bitbucket.org/techracer/loyalty.git
+  revision: 8ac87f0a368dc16a64573806fe94c6620b9b6a5d
   specs:
     loyalty (0.1.0)
       rails (~> 5.2.0)
