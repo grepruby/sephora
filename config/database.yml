@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: sephora_production
-  username: sephora
-  password: <%= ENV['SEPHORA_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>

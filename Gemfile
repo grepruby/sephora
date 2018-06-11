@@ -23,17 +23,20 @@ gem 'puma', '~> 3.11'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'loyalty', git: 'https://bitbucket.org/techracer/loyalty.git'
-# gem 'loyalty', path: '../loyalty'
+gem 'loyalty', :git => "git://github.com/aaark/loyalty.git", ref: '27bea088e07d3d4f6d255b0ee17415869146dc1f'
+#gem 'loyalty', path: '../loyalty'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+gem 'rack-cors'
 
 gem "factory_bot_rails", "~> 4.0"
 gem 'faker'
+
+gem 'webpacker', '~> 3.5'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

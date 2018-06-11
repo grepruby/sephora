@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "bootstrap": "^4.1.1",
+    "vue": "^2.5.16",
+    "vue-loader": "14.2.2",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.16",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "webpack-cli": "^3.0.3",
+    "webpack-dev-server": "^2.11.1"
+  }
+}
