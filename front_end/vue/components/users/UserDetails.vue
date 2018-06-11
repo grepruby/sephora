@@ -24,6 +24,14 @@
               <p class="col-md-6 col-lg-6"><b>Last Name :- </b></p>
               <p class="col-md-6 col-lg-6">{{user.last_name}}</p>
             </div>
+            <div class="col-md-12 col-lg-12 user">
+              <p class="col-md-6 col-lg-6"><b>Loyalty Level :- </b></p>
+              <p class="col-md-6 col-lg-6">{{user.loyalty_level}}</p>
+            </div>
+            <div class="col-md-12 col-lg-12 user">
+              <p class="col-md-6 col-lg-6"><b>Nationality :- </b></p>
+              <p class="col-md-6 col-lg-6">{{user.country}}</p>
+            </div>
           </div>
         </div>
         <div v-else>
@@ -37,8 +45,7 @@
   export default {
     name: 'UsersList',
     props: {
-      user: Object,
-      default: null
+      user: Object
     }
   }
 </script>

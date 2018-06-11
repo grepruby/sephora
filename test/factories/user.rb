@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :user do
     email { Faker::Internet.email }
@@ -5,6 +7,11 @@ FactoryBot.define do
     last_name { Faker::Name.last_name }
     age { Random.rand(18..60) }
     gender { Random.rand(0..1) }
-    country { Faker::Address.country }
+    country { Faker::Address.country_code }
+    association :loyalty_account, factory: :loyalty_account
+  end
+
+  factory :loyalty_account, class: Loyalty::Account do
+    level 1
   end
 end

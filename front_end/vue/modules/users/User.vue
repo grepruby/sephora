@@ -12,10 +12,10 @@
     name: 'User',
     computed: {
       id () { return this.$route.params.id },
-      user () { return this.$store.getters['users/getById'](this.id) }
+      user () { return this.$store.state.users.user }
     },
     async mounted () {
-      await this.$store.dispatch('users/all')
+      await this.$store.dispatch('users/getUserById', {id: this.id})
     },
     components: {
       UserDetails

@@ -8,18 +8,23 @@
           <th>First Name</th>
           <th>Last Name</th>
           <th>Email</th>
+          <th>Loyalty Level</th>
+
+          <th>Nationality</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="user in users">
-          <td>{{user.id}}</td>
+          <td>{{user.attributes.id}}</td>
           <td>
             <router-link :to="`users/${user.id}`">
-              {{user.first_name}}
+              {{user.attributes.first_name}}
             </router-link>
           </td>
-          <td>{{user.last_name}}</td>
-          <td>{{user.email}}</td>
+          <td>{{user.attributes.last_name}}</td>
+          <td>{{user.attributes.email}}</td>
+          <td>{{user.attributes.loyalty_level}}</td>
+          <td>{{user.attributes.country}}</td>
         </tr>
       </tbody>
     </table>
@@ -29,8 +34,7 @@
   export default {
     name: 'UsersList',
     props: {
-      users: Array,
-      default: []
+      users: Array
     }
   }
 </script>

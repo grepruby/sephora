@@ -2,28 +2,50 @@ export default {
   namespaced: true,
 
   state: {
-    all: null
-  },
-
-  getters: {
-    getById: (state) => (id) => (state.all ? state.all.find(o => o.id === Number(id)) : null)
+    all: null,
+    user: null,
+    count: 0
   },
 
   mutations: {
-    set(state, assets) {
-      state.all = assets
+    setUsers(state, users) {
+      state.all = users
+    },
+    setCount(state, count) {
+      state.count = count
+    },
+    setUser(state, user) {
+      state.user = user
     }
   },
 
   actions: {
-    async all({ commit }) {
+    async all({ commit }, {page, count}) {
       try {
-        fetch(`/api/v1/users`)
+        fetch(`/api/v1/users?page=${page}&count=${count}`)
         .then(response => {
           return response.json()
         })
         .then(res => {
-          commit('set', res.users)
+          console.log(res)
+          commit('setUsers', res.data)
+          commit('setCount', res.meta.count)
+        })
+        .catch(err => {
+          console.log(err)
+        })
+      } catch (e) {
+        throw e
+      }
+    },
+    async getUserById({ commit }, {id}) {
+      try {
+        fetch(`/api/v1/users/${id}`)
+        .then(response => {
+          return response.json()
+        })
+        .then(res => {
+          commit('setUser', res.data.attributes)
         })
         .catch(err => {
           console.log(err)

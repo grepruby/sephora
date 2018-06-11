@@ -23,7 +23,7 @@ gem 'puma', '~> 3.11'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'loyalty', :git => "git://github.com/aaark/loyalty.git", ref: '27bea088e07d3d4f6d255b0ee17415869146dc1f'
+gem 'loyalty', :git => "git://github.com/aaark/loyalty.git", ref: 'dfb8a5c54ae480efef3519927ad3d177343fc708'
 #gem 'loyalty', path: '../loyalty'
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -36,6 +36,10 @@ gem "factory_bot_rails", "~> 4.0"
 gem 'faker'
 
 gem 'webpacker', '~> 3.5'
+
+gem 'fast_jsonapi'
+
+gem 'kaminari'
 
 
 group :development, :test do

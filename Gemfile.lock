@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/aaark/loyalty.git
-  revision: 27bea088e07d3d4f6d255b0ee17415869146dc1f
-  ref: 27bea088e07d3d4f6d255b0ee17415869146dc1f
+  revision: dfb8a5c54ae480efef3519927ad3d177343fc708
+  ref: dfb8a5c54ae480efef3519927ad3d177343fc708
   specs:
     loyalty (0.1.0)
       rails (~> 5.2.0)
@@ -67,11 +67,25 @@ GEM
       railties (>= 3.0.0)
     faker (1.8.7)
       i18n (>= 0.7)
+    fast_jsonapi (1.2)
+      activesupport (>= 4.2)
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
+    kaminari (1.1.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.1.1)
+      kaminari-activerecord (= 1.1.1)
+      kaminari-core (= 1.1.1)
+    kaminari-actionview (1.1.1)
+      actionview
+      kaminari-core (= 1.1.1)
+    kaminari-activerecord (1.1.1)
+      activerecord
+      kaminari-core (= 1.1.1)
+    kaminari-core (1.1.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -161,6 +175,8 @@ DEPENDENCIES
   byebug
   factory_bot_rails (~> 4.0)
   faker
+  fast_jsonapi
+  kaminari
   listen (>= 3.0.5, < 3.2)
   loyalty!
   pg (>= 0.18, < 2.0)

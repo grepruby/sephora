@@ -3,14 +3,15 @@ class Api::V1::UsersController < ApplicationController
 
   # GET /users
   def index
-    @users = User.all
-
-    render json: @users
+    @users = User.all.page(params[:page]).per(params[:count])
+    options = {}
+    options[:meta] = { count: User.count }
+    render json: UserSerializer.new(@users, options).serialized_json
   end
 
   # GET /users/1
   def show
-    render json: @user
+    render json: UserSerializer.new(@user).serialized_json
   end
 
   # POST /users
