@@ -95,7 +95,6 @@ GEM
     pg (1.0.0)
     puma (3.11.4)
     rack (2.0.5)
-    rack-cors (1.0.2)
     rack-proxy (0.6.4)
       rack
     rack-test (1.0.0)
@@ -166,7 +165,6 @@ DEPENDENCIES
   loyalty!
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
-  rack-cors
   rails (~> 5.2.0)
   spring
   spring-watcher-listen (~> 2.0.0)
