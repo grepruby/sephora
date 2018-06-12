@@ -47,7 +47,7 @@
     background-color: #fff;
   }
   .custom-table thead {
-    background: red;
+    background: #21233cd6;
     color: #fff;
   }
 </style>
