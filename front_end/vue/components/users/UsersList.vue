@@ -24,7 +24,7 @@
           <td>{{user.attributes.last_name}}</td>
           <td>{{user.attributes.email}}</td>
           <td>{{user.attributes.loyalty_level}}</td>
-          <td>{{user.attributes.country}}</td>
+          <td>{{user.attributes.country_detail.demonym}}</td>
         </tr>
       </tbody>
     </table>
@@ -51,5 +51,3 @@
     color: #fff;
   }
 </style>
-
-

@@ -5,8 +5,9 @@ class RestCountry
 
   def self.find_by_alpha_code(country_code)
     response = JSON.parse(Net::HTTP.get(URI(BASE_URL + country_code)))
-    OpenStruct.new(
+    {
+      name: response['name'],
       demonym: response['demonym']
-    )
+    }
   end
 end

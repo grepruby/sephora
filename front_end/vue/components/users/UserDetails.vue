@@ -30,7 +30,7 @@
             </div>
             <div class="col-md-12 col-lg-12 user">
               <p class="col-md-6 col-lg-6"><b>Nationality :- </b></p>
-              <p class="col-md-6 col-lg-6">{{user.country}}</p>
+              <p class="col-md-6 col-lg-6">{{user.country_detail.demonym}}</p>
             </div>
           </div>
         </div>
