@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/aaark/loyalty.git
+  remote: https://bitbucket.org/techracer/loyalty.git
   revision: dfb8a5c54ae480efef3519927ad3d177343fc708
   ref: dfb8a5c54ae480efef3519927ad3d177343fc708
   specs:
