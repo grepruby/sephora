@@ -12,6 +12,6 @@ FactoryBot.define do
   end
 
   factory :loyalty_account, class: Loyalty::Account do
-    level 1
+    level Random.rand(1..3)
   end
 end
