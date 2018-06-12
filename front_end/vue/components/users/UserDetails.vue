@@ -1,10 +1,8 @@
 <template>
   <div class="container">
-    <h2>User Detail</h2>
-    <div class="demo">
-      <router-link to="/">
-        <button> <span> &#8592; </span>Go Back </button>
-      </router-link>
+    <div class="demo thumbnail">
+      <h2>User Detail</h2>
+
       <div class="user-detail">
         <div v-if="user">
           <div class="row">
@@ -39,6 +37,9 @@
         </div>
       </div>
     </div>
+    <router-link to="/">
+      <button class="btn btn-primary"> <span> &#8592; </span>Go Back </button>
+    </router-link>
   </div>
 </template>
 <script>
@@ -52,22 +53,41 @@
 
 <style type="text/css">
   .demo {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
+
+  }
+
+  .user-detail {
+    background: #fefefe;
+    border: 1px #eeeeee solid;
+    display: inline-block;
+    padding: 15px;000
+    border-radius: 5px;
+    width: 50%;
+    margin-top: 15px;
+    box-shadow: 0px 10px 25px #dcdcdc;
   }
   .user-detail p {
     margin: 0;
     padding: 10px 0 0 0;
   }
-  .demo button {
+  button {
     background: inherit;
     border: 1px solid gray;
     border-radius: 4px;
     padding: 5px 10px;
+    margin-top: 15px;
   }
   .user {
     display: inherit;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #dcdcdc;
     padding-bottom: 10px;
+  }
+
+  header {
+    background: #fff;
+    display: inline-block;
+    width: 100%;
   }
 </style>

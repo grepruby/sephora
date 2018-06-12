@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h2>User List</h2>
-    <table class="table custom-table">
+    <table class="table custom-table table-bordered">
       <thead>
         <tr>
           <th>ID</th>
@@ -9,7 +9,6 @@
           <th>Last Name</th>
           <th>Email</th>
           <th>Loyalty Level</th>
-
           <th>Nationality</th>
         </tr>
       </thead>
