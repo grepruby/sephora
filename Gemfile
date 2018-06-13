@@ -23,7 +23,7 @@ gem 'puma', '~> 3.11'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'loyalty', :git => ENV['LOYALTY_GEM_URL'], ref: 'dfb8a5c54ae480efef3519927ad3d177343fc708'
+gem 'loyalty', :git => ENV['LOYALTY_GEM_URL'], ref: '7e1d0f8c85d7ea45d36c994ab2e3a7cdfd4f40e4'
 #gem 'loyalty', path: '../loyalty'
 
 # Reduces boot times through caching; required in config/boot.rb
