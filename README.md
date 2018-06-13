@@ -37,6 +37,7 @@
     * Migrations for loyalty engine should support versions as well
     * Token based authentication for session management
     * Background jobs to fetch data from third-party APIs like rest country
+    * Use vuetify framework for further vuejs modification
 
 
  ## Heroku App
