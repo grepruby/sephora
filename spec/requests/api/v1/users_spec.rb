@@ -7,11 +7,11 @@ describe 'User API' do
     describe 'without pagination params' do
       before { get '/api/v1/users' }
 
-      it 'returns HTTP status 200' do
+      it 'should returns HTTP status 200' do
         expect(response).to have_http_status 200
       end
 
-      it 'returns all users' do
+      it 'should returns all users' do
         expect(json_response[:data].size).to eq(10)
       end
     end
@@ -20,19 +20,19 @@ describe 'User API' do
       let!(:per_page) { 6 }
 
       it 'page 1, returns users per page' do
-        get "/api/v1/users?page=1&count=#{per_page}"
+        get "/api/v1/users?page=1&per_page=#{per_page}"
 
         expect(json_response[:data].size).to eq(per_page)
       end
 
       it 'page 2, returns remaining users' do
-        get "/api/v1/users?page=2&count=#{per_page}"
+        get "/api/v1/users?page=2&per_page=#{per_page}"
 
         expect(json_response[:data].size).to eq(users.count-per_page)
       end
 
       it 'page 3, returns no user' do
-        get "/api/v1/users?page=3&count=#{per_page}"
+        get "/api/v1/users?page=3&per_page=#{per_page}"
 
         expect(json_response[:data]).to be_empty
       end
@@ -45,15 +45,15 @@ describe 'User API' do
 
     before { get "/api/v1/users/#{user.id}" }
 
-    it 'returns HTTP status 200' do
+    it 'should returns HTTP status 200' do
       expect(response).to have_http_status 200
     end
 
-    it 'returns the requested user' do
+    it 'should returns the requested user' do
       expect(json_response[:data][:attributes][:email]).to eq(user.email)
     end
 
-    it 'returns serialized attributes' do
+    it 'should returns serialized attributes' do
       expect(json_response[:data][:attributes].keys).to eq(user_hash[:data][:attributes].keys)
     end
   end
