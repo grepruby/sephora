@@ -1,24 +1,48 @@
 # README
+## Specifications
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
+* Ruby version - 2.5.1
 
 * System dependencies
+    * postgress 9.6
+    * rails 5.2
 
-* Configuration
+* Setup Instruction
 
-* Database creation
+    * Clone both app in same directory
+    * Uncomment gem
 
-* Database initialization
+        >gem 'loyalty', path: '../loyalty'
 
-* How to run the test suite
+        and comment previous line
 
-* Services (job queues, cache servers, search engines, etc.)
+    * Install bundler and Run bundle install
+        > gem install bundler
 
-* Deployment instructions
+        > bundle install
+ 
+    Database setup
 
-* ...
+    * rake db:create
+    * rake loyalty:db:create
+    * rake db:migrate
+    * rake loyalty:migrate
+    * rake db:seed
+
+    Start Server
+
+     * Start rails server 
+        >rails s
+     * Start webpack server in new terminal tab
+        > ./bin/webpack-dev-server
+
+
+
+ ## Enhancement
+
+  Version migration are not supported for plugging we can enhance that as well.
+
+  ## Heroku App
+
+    https://loyaltysep.herokuapp.com
+
