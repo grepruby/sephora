@@ -6,7 +6,8 @@ export default {
   state: {
     all: null,
     user: null,
-    totalCount: 0
+    totalCount: 0,
+    loading: true
   },
 
   mutations: {
@@ -18,6 +19,9 @@ export default {
     },
     setUser(state, user) {
       state.user = user
+    },
+    setLoading(state, loading) {
+      state.loading = loading
     }
   },
 
@@ -41,14 +45,17 @@ export default {
     },
     async getUserById({ commit }, {id}) {
       try {
+        commit('setLoading', true)
         fetch(`${baseUrl}/users/${id}`)
         .then(response => {
           return response.json()
         })
         .then(res => {
+          commit('setLoading', false)
           commit('setUser', res.data.attributes)
         })
         .catch(err => {
+          commit('setLoading', false)
           console.log(err)
         })
       } catch (e) {

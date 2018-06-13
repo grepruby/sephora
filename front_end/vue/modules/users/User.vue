@@ -2,7 +2,7 @@
   <section>
     <main>
       <Heading>User Details</Heading>
-      <Details :user="user" />
+      <Details :user="user" :loading="loading" />
     </main>
   </section>
 </template>
@@ -14,7 +14,8 @@
     name: 'User',
     computed: {
       id () { return this.$route.params.id },
-      user () { return this.$store.state.users.user }
+      user () { return this.$store.state.users.user },
+      loading () { return this.$store.state.users.loading }
     },
     async mounted () {
       await this.$store.dispatch('users/getUserById', {id: this.id})

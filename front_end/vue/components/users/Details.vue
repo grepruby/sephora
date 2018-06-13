@@ -1,37 +1,42 @@
 <template>
   <div>
     <div class="user-detail">
-      <div v-if="user">
-        <div class="row">
-          <div class="col-md-12 user">
-            <p class="col-md-3"><b>Id :</b></p>
-            <p class="col-md-9">{{user.id}} </p>
-          </div>
-          <div class="col-md-12  user">
-            <p class="col-md-3"><b>User Email :</b></p>
-            <p class="col-md-9">{{user.email}}</p>
-          </div>
-          <div class="col-md-12  user">
-            <p class="col-md-3"><b>First Name :</b></p>
-            <p class="col-md-9">{{user.first_name}}</p>
-          </div>
-          <div class="col-md-12  user">
-            <p class="col-md-3"><b>Last Name :</b></p>
-            <p class="col-md-9">{{user.last_name}}</p>
-          </div>
-          <div class="col-md-12  user">
-            <p class="col-md-3"><b>Loyalty Level :</b></p>
-            <p class="col-md-9">{{user.loyalty_level}}</p>
-          </div>
-          <div class="col-md-12  user">
-            <p class="col-md-3"><b>Nationality :</b></p>
-            <p class="col-md-9">{{user.country_details && user.country_details.demonym}}</p>
-          </div>
-        </div>
+      <div v-if = "loading">
+        loading...
       </div>
       <div v-else>
-        No User Found
-      </div>
+        <div v-if="user">
+          <div class="row">
+            <div class="col-md-12 user">
+              <p class="col-md-3"><b>Id :</b></p>
+              <p class="col-md-9">{{user.id}} </p>
+            </div>
+            <div class="col-md-12  user">
+              <p class="col-md-3"><b>User Email :</b></p>
+              <p class="col-md-9">{{user.email}}</p>
+            </div>
+            <div class="col-md-12  user">
+              <p class="col-md-3"><b>First Name :</b></p>
+              <p class="col-md-9">{{user.first_name}}</p>
+            </div>
+            <div class="col-md-12  user">
+              <p class="col-md-3"><b>Last Name :</b></p>
+              <p class="col-md-9">{{user.last_name}}</p>
+            </div>
+            <div class="col-md-12  user">
+              <p class="col-md-3"><b>Loyalty Level :</b></p>
+              <p class="col-md-9">{{user.loyalty_level}}</p>
+            </div>
+            <div class="col-md-12  user">
+              <p class="col-md-3"><b>Nationality :</b></p>
+              <p class="col-md-9">{{user.country_details && user.country_details.demonym}}</p>
+            </div>
+          </div>
+        </div>
+        <div v-else>
+          No User Found
+        </div>
+      </div>  
     </div>
     </br>
     <router-link to="/" class="btn btn-dark">
@@ -43,7 +48,8 @@
   export default {
     name: 'Details',
     props: {
-      user: Object
+      user: Object,
+      loading: Boolean
     }
   }
 </script>
