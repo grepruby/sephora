@@ -22,7 +22,7 @@
           <td>{{user.attributes.last_name}}</td>
           <td>{{user.attributes.email}}</td>
           <td>{{user.attributes.loyalty_level}}</td>
-          <td>{{user.attributes.country_details.demonym}}</td>
+          <td>{{user.attributes.country_details && user.attributes.country_details.demonym}}</td>
         </tr>
       </tbody>
     </table>

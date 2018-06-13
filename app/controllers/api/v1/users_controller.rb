@@ -5,9 +5,9 @@ class Api::V1::UsersController < Api::ApiController
 
   # GET /users
   def index
-    @users = User.all.page(params[:page]).per(params[:count])
+    @users = User.page(params[:page]).per(params[:per_page])
     options = {}
-    options[:meta] = { count: User.count }
+    options[:meta] = { total_count: @users.total_count }
     render json: UserSerializer.new(@users, options).serialized_json
   end
 

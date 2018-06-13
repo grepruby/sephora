@@ -3,7 +3,7 @@
     <main>
       <Heading>Users List</Heading>
       <List :users="users"/>
-      <Pagination :total="Math.ceil(total / 10)" :current="current" :action="onPageChange" />
+      <Pagination :total="Math.ceil(totalCount / 10)" :current="current" :action="onPageChange" />
     </main>
   </section>
 </template>
@@ -13,7 +13,7 @@
   import Pagination from '../../components/Pagination'
   import Heading from '../../components/Heading'
 
-  const RECORD_COUNT = 10
+  const RECORD_PER_PAGE = 10
 
   export default {
     name: 'Users',
@@ -24,15 +24,15 @@
     },
     computed: {
       users () { return this.$store.state.users.all || [] },
-      total () { return this.$store.state.users.count || 0 }
+      totalCount () { return this.$store.state.users.totalCount || 0 }
     },
     async mounted () {
-      await this.$store.dispatch('users/all', {page: this.current, count: RECORD_COUNT})
+      await this.$store.dispatch('users/all', {page: this.current, perPage: RECORD_PER_PAGE})
     },
     methods: {
       async onPageChange (page) {
         this.current = page
-        await this.$store.dispatch('users/all', {page, count: RECORD_COUNT})
+        await this.$store.dispatch('users/all', {page, perPage: RECORD_PER_PAGE})
       }
     },
     components: {

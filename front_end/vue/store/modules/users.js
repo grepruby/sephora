@@ -6,15 +6,15 @@ export default {
   state: {
     all: null,
     user: null,
-    count: 0
+    totalCount: 0
   },
 
   mutations: {
     setUsers(state, users) {
       state.all = users
     },
-    setCount(state, count) {
-      state.count = count
+    setTotalCount(state, totalCount) {
+      state.totalCount = totalCount
     },
     setUser(state, user) {
       state.user = user
@@ -22,15 +22,15 @@ export default {
   },
 
   actions: {
-    async all({ commit }, {page, count}) {
+    async all({ commit }, {page, perPage}) {
       try {
-        fetch(`${baseUrl}/users?page=${page}&count=${count}`)
+        fetch(`${baseUrl}/users?page=${page}&per_page=${perPage}`)
         .then(response => {
           return response.json()
         })
         .then(res => {
           commit('setUsers', res.data)
-          commit('setCount', res.meta.count)
+          commit('setTotalCount', res.meta.total_count)
         })
         .catch(err => {
           console.log(err)
