@@ -7,20 +7,15 @@
     * postgress 9.6
     * rails 5.2
 
-* Setup Instruction
+* Setup Instructions
 
-    * Clone both app in same directory
-    * Uncomment gem
-
-        >gem 'loyalty', path: '../loyalty'
-
-        and comment previous line
+    * Clone the repository
 
     * Install bundler and Run bundle install
         > gem install bundler
 
         > bundle install
- 
+
     Database setup
 
     * rake db:create
@@ -31,18 +26,19 @@
 
     Start Server
 
-     * Start rails server 
+     * Start rails server
         >rails s
-     * Start webpack server in new terminal tab
+     * Start webpack server
         > ./bin/webpack-dev-server
 
 
 
  ## Enhancement
+    * Migrations for loyalty engine should support versions as well
+    * Token based authentication for session management
+    * Background jobs to fetch data from third-party APIs like rest country
 
-  Version migration are not supported for plugging we can enhance that as well.
 
-  ## Heroku App
+ ## Heroku App
 
     https://loyaltysep.herokuapp.com
-
