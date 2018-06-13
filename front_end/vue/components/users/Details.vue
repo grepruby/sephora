@@ -34,8 +34,8 @@
       </div>
     </div>
     </br>
-    <router-link to="/">
-      <button class="btn btn-dark"> <span> &#8592; </span>Go Back </button>
+    <router-link to="/" class="btn btn-dark">
+       <span> &#8592; </span>Go Back
     </router-link>
   </div>
 </template>
@@ -52,7 +52,7 @@
   @import 'bootstrap/dist/css/bootstrap.css';
 </style>
 
-<style type="text/css">
+<style type="text/css" scoped>
   .user-detail {
     background: #fefefe;
     border: 1px #eeeeee solid;
