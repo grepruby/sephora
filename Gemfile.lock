@@ -1,7 +1,7 @@
 GIT
   remote: https://bitbucket.org/techracer/loyalty.git
-  revision: dfb8a5c54ae480efef3519927ad3d177343fc708
-  ref: dfb8a5c54ae480efef3519927ad3d177343fc708
+  revision: 7e1d0f8c85d7ea45d36c994ab2e3a7cdfd4f40e4
+  ref: 7e1d0f8c85d7ea45d36c994ab2e3a7cdfd4f40e4
   specs:
     loyalty (0.1.0)
       rails (~> 5.2.0)
