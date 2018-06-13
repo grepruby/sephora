@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2018_06_12_072134) do
     t.integer "loyalty_account_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.jsonb "country_detail"
+    t.jsonb "country_details"
     t.index ["email"], name: "index_users_on_email"
     t.index ["loyalty_account_id"], name: "index_users_on_loyalty_account_id"
   end

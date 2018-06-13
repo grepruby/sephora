@@ -25,14 +25,14 @@ describe User do
   context "validations" do
     let!(:user) { FactoryBot.build(:user, country: 'sg')}
 
-    context 'country_detail' do
+    context 'country_details' do
       it "should be nil before save" do
-        expect(user.country_detail).to be_nil
+        expect(user.country_details).to be_nil
       end
 
       it "should have hash with deails according to country after save" do
         user.save!
-        expect(user.country_detail).to eq({"name"=>"Singapore", "demonym"=>"Singaporean"})
+        expect(user.country_details).to eq({"name"=>"Singapore", "demonym"=>"Singaporean"})
       end
     end
   end

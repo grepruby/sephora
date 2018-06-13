@@ -26,7 +26,7 @@
             </div>
             <div class="col-md-12  user">
               <p class="col-md-6"><b>Nationality :- </b></p>
-              <p class="col-md-6">{{user.country_detail.demonym}}</p>
+              <p class="col-md-6">{{user.country_details.demonym}}</p>
             </div>
           </div>
         </div>
