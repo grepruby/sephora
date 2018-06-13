@@ -1,3 +1,5 @@
+import baseUrl from '../../utils/baseUrl'
+
 export default {
   namespaced: true,
 
@@ -22,7 +24,7 @@ export default {
   actions: {
     async all({ commit }, {page, count}) {
       try {
-        fetch(`/api/v1/users?page=${page}&count=${count}`)
+        fetch(`${baseUrl}/users?page=${page}&count=${count}`)
         .then(response => {
           return response.json()
         })
@@ -39,7 +41,7 @@ export default {
     },
     async getUserById({ commit }, {id}) {
       try {
-        fetch(`/api/v1/users/${id}`)
+        fetch(`${baseUrl}/users/${id}`)
         .then(response => {
           return response.json()
         })
