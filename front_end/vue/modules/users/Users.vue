@@ -1,7 +1,7 @@
 <template>
   <section>
     <main>
-      <Heading>Users</Heading>
+      <Heading>Users List</Heading>
       <List :users="users"/>
       <Pagination :total="Math.ceil(total / 10)" :current="current" :action="onPageChange" />
     </main>
