@@ -1,15 +1,17 @@
 <template>
   <section>
     <main>
-      <UsersList :users="users"/>
+      <Heading>Users</Heading>
+      <List :users="users"/>
       <Pagination :total="Math.ceil(total / 10)" :current="current" :action="onPageChange" />
     </main>
   </section>
 </template>
 
 <script>
-  import UsersList from '../../components/users/UsersList'
+  import List from '../../components/users/List'
   import Pagination from '../../components/Pagination'
+  import Heading from '../../components/Heading'
 
   const RECORD_COUNT = 10
 
@@ -34,11 +36,9 @@
       }
     },
     components: {
-      UsersList,
-      Pagination
+      List,
+      Pagination,
+      Heading
     }
   }
 </script>
-<style lang="scss">
-  @import 'bootstrap/dist/css/bootstrap.css';
-</style>

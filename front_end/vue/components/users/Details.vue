@@ -1,34 +1,32 @@
 <template>
   <div class="container">
     <div class="demo thumbnail">
-      <h2>User Detail</h2>
-
       <div class="user-detail">
         <div v-if="user">
           <div class="row">
-            <div class="col-md-12 col-lg-12 user">
-              <p class="col-md-6 col-lg-6"><b>Id :-</b> </p>
-              <p class="col-md-6 col-lg-6">{{user.id}} </p>
+            <div class="col-md-12 user">
+              <p class="col-md-6"><b>Id :-</b> </p>
+              <p class="col-md-6">{{user.id}} </p>
             </div>
-            <div class="col-md-12 col-lg-12 user">
-              <p class="col-md-6 col-lg-6"><b>User Email :- </b></p>
-              <p class="col-md-6 col-lg-6">{{user.email}}</p>
+            <div class="col-md-12  user">
+              <p class="col-md-6"><b>User Email :- </b></p>
+              <p class="col-md-6">{{user.email}}</p>
             </div>
-            <div class="col-md-12 col-lg-12 user">
-              <p class="col-md-6 col-lg-6"><b>First Name :- </b></p>
-              <p class="col-md-6 col-lg-6">{{user.first_name}}</p>
+            <div class="col-md-12  user">
+              <p class="col-md-6"><b>First Name :- </b></p>
+              <p class="col-md-6">{{user.first_name}}</p>
             </div>
-            <div class="col-md-12 col-lg-12 user">
-              <p class="col-md-6 col-lg-6"><b>Last Name :- </b></p>
-              <p class="col-md-6 col-lg-6">{{user.last_name}}</p>
+            <div class="col-md-12  user">
+              <p class="col-md-6"><b>Last Name :- </b></p>
+              <p class="col-md-6">{{user.last_name}}</p>
             </div>
-            <div class="col-md-12 col-lg-12 user">
-              <p class="col-md-6 col-lg-6"><b>Loyalty Level :- </b></p>
-              <p class="col-md-6 col-lg-6">{{user.loyalty_level}}</p>
+            <div class="col-md-12  user">
+              <p class="col-md-6"><b>Loyalty Level :- </b></p>
+              <p class="col-md-6">{{user.loyalty_level}}</p>
             </div>
-            <div class="col-md-12 col-lg-12 user">
-              <p class="col-md-6 col-lg-6"><b>Nationality :- </b></p>
-              <p class="col-md-6 col-lg-6">{{user.country_detail.demonym}}</p>
+            <div class="col-md-12  user">
+              <p class="col-md-6"><b>Nationality :- </b></p>
+              <p class="col-md-6">{{user.country_detail.demonym}}</p>
             </div>
           </div>
         </div>
@@ -44,12 +42,16 @@
 </template>
 <script>
   export default {
-    name: 'UsersList',
+    name: 'Details',
     props: {
       user: Object
     }
   }
 </script>
+
+<style lang="scss">
+  @import 'bootstrap/dist/css/bootstrap.css';
+</style>
 
 <style type="text/css">
   .demo {

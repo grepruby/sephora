@@ -27,7 +27,6 @@ export default {
           return response.json()
         })
         .then(res => {
-          console.log(res)
           commit('setUsers', res.data)
           commit('setCount', res.meta.count)
         })

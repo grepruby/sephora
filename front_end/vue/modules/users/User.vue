@@ -1,13 +1,15 @@
 <template>
   <section>
     <main>
-      <UserDetails :user="user" />
+      <Heading>User Details</Heading>
+      <Details :user="user" />
     </main>
   </section>
 </template>
 
 <script>
-  import UserDetails from '../../components/users/UserDetails'
+  import Details from '../../components/users/Details'
+  import Heading from '../../components/Heading'
   export default {
     name: 'User',
     computed: {
@@ -18,11 +20,8 @@
       await this.$store.dispatch('users/getUserById', {id: this.id})
     },
     components: {
-      UserDetails
+      Details,
+      Heading
     }
   }
 </script>
-
-<style lang="scss">
-  @import 'bootstrap/dist/css/bootstrap.css';
-</style>

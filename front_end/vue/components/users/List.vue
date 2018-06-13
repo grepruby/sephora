@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <h2>User List</h2>
     <table class="table custom-table table-bordered">
       <thead>
         <tr>
@@ -31,12 +30,16 @@
 </template>
 <script>
   export default {
-    name: 'UsersList',
+    name: 'List',
     props: {
       users: Array
     }
   }
 </script>
+
+<style lang="scss">
+  @import 'bootstrap/dist/css/bootstrap.css';
+</style>
 
 <style type="text/css">
   .custom-table tbody tr:nth-child(odd){
@@ -50,3 +53,4 @@
     color: #fff;
   }
 </style>
+
