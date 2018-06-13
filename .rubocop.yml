@@ -1,0 +1,22 @@
+AllCops:
+  Exclude:
+    - test/models/user_test.rb
+    - config/**/*
+    - db/**/*
+    - bin/**
+    - Rakefile
+    - config.ru
+    - node_modules/**/*
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Metrics/LineLength:
+  Max: 120
+  IgnoreCopDirectives: true
+Style/Documentation:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Metrics/BlockLength:
+   Exclude:
+     - spec/models/user_spec.rb
+     - spec/requests/api/v1/users_spec.rb

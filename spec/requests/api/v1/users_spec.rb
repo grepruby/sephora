@@ -28,7 +28,7 @@ describe 'User API' do
       it 'page 2, returns remaining users' do
         get "/api/v1/users?page=2&per_page=#{per_page}"
 
-        expect(json_response[:data].size).to eq(users.count-per_page)
+        expect(json_response[:data].size).to eq(users.count - per_page)
       end
 
       it 'page 3, returns no user' do
@@ -40,7 +40,7 @@ describe 'User API' do
   end
 
   describe 'GET /api/v1/users/:id' do
-    let!(:user) { FactoryBot.create(:user)}
+    let!(:user) { FactoryBot.create(:user) }
     let!(:user_hash) { UserSerializer.new(user).to_hash }
 
     before { get "/api/v1/users/#{user.id}" }

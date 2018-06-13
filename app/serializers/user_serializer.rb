@@ -8,5 +8,4 @@ class UserSerializer < ActiveModel::Serializer
   attributes :loyalty_level do |object|
     object.loyalty_account&.level
   end
-
 end
