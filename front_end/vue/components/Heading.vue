@@ -1,9 +1,7 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">
-      <slot />
-    </a>
-  </nav>
+  <h3>
+    <slot />
+  </h3>
 </template>
 
 <script>
@@ -11,3 +9,10 @@
     name: 'Heading'
   }
 </script>
+
+<style type="text/css" scoped>
+  h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+</style>

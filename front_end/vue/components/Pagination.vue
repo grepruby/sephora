@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
-    <button :disabled="!(current > 1)" @click="previous()" class="btn btn-primary">Previous</button>
-    <button :disabled="!(current < total)" @click="next()" class="btn btn-primary">Next</button>
+  <div>
+    <button :disabled="!(current > 1)" @click="previous()" class="btn btn-dark">Previous</button>
+    <button :disabled="!(current < total)" @click="next()" class="btn btn-dark">Next</button>
   </div>
 </template>
 <script>

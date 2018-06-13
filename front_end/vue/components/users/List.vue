@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <table class="table custom-table table-bordered">
+  <div>
+    <table class="table table-striped table-bordered custom-table">
       <thead>
         <tr>
           <th>ID</th>
@@ -41,7 +41,7 @@
   @import 'bootstrap/dist/css/bootstrap.css';
 </style>
 
-<style type="text/css">
+<style type="text/css" scoped>
   .custom-table tbody tr:nth-child(odd){
     background-color: #ddd;
   }
@@ -49,7 +49,11 @@
     background-color: #fff;
   }
   .custom-table thead {
-    background: #21233cd6;
+    background: #343a40;
     color: #fff;
+  }
+  .custom-table tr, td {
+    overflow: hidden;
+    width: 300px;
   }
 </style>
