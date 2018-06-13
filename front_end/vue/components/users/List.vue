@@ -37,10 +37,6 @@
   }
 </script>
 
-<style lang="scss">
-  @import 'bootstrap/dist/css/bootstrap.css';
-</style>
-
 <style type="text/css" scoped>
   .custom-table tbody tr:nth-child(odd){
     background-color: #ddd;

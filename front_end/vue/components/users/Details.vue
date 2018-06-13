@@ -48,10 +48,6 @@
   }
 </script>
 
-<style lang="scss">
-  @import 'bootstrap/dist/css/bootstrap.css';
-</style>
-
 <style type="text/css" scoped>
   .user-detail {
     background: #fefefe;
