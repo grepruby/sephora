@@ -1,5 +1,5 @@
 GIT
-  remote: https://bitbucket.org/techracer/loyalty.git
+  remote: https://github.com/grepruby/loyalty
   revision: 7e1d0f8c85d7ea45d36c994ab2e3a7cdfd4f40e4
   ref: 7e1d0f8c85d7ea45d36c994ab2e3a7cdfd4f40e4
   specs:
