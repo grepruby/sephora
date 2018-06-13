@@ -9,5 +9,8 @@ class RestCountry
       name: response['name'],
       demonym: response['demonym']
     }
+  rescue StandardError => e
+    Rails.logger.error("#{e.message} \n #{e.backtrace}")
+    {}
   end
 end
